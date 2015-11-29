@@ -162,7 +162,7 @@ void ShaderTextEditor::_bind_methods() {
 }
 
 ShaderTextEditor::ShaderTextEditor() {
-    shader_type=SHADER_TYPE_VERTEX;
+    shader=SHADER_TYPE_VERTEX;
 }
 
 /*** SCRIPT EDITOR ******/
