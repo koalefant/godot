@@ -261,10 +261,10 @@ Error Vector<T>::resize(int p_size) {
 
 		if (size()==0) {
 			// alloc from scratch
-            void* ptr=memalloc(_get_alloc_size(p_size));
-            ERR_FAIL_COND_V( !ptr ,ERR_OUT_OF_MEMORY);
-            _ptr=(T*)((uint8_t*)ptr+sizeof(int)+sizeof(SafeRefCount));
-            _get_refcount()->init(); // init refcount
+			void* ptr=memalloc(_get_alloc_size(p_size));
+			ERR_FAIL_COND_V( !ptr ,ERR_OUT_OF_MEMORY);
+			_ptr=(T*)((uint8_t*)ptr+sizeof(int)+sizeof(SafeRefCount));
+			_get_refcount()->init(); // init refcount
 			*_get_size()=0; // init size (currently, none)
 
 		} else {
